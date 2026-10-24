@@ -1,0 +1,148 @@
+body{
+	background-color:#c9ada7ff;
+	margin:0;
+}
+
+.topbar{
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 4rem;
+	width: 100%;
+	background-color: #22223bff;
+	display: grid;
+	grid-template-columns: 10rem auto 10rem;
+	align-content: center;
+	z-index: 99999;
+	}
+	
+.menu{
+	margin-left: 1rem;
+	justify-self: start;
+}
+
+.menu-btn{
+    background: none;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    display: block;
+    width: 2.5rem;
+    justify-self: start;
+}
+
+.drawer{
+	position: fixed;
+	height: 100%;
+	width: min(100vh, 20rem);
+	background-color: #4a4e69ff;
+	left: 0;
+	top: 15px;
+	z-index: 99990;
+	transform: translateX(-100%);    
+    visibility: hidden;
+    transition: transform 0.3s ease, visibility 0.3s;
+}
+
+.drawer.open{
+	transform: translateX(0);
+	visibility: visible;
+}
+
+.titolo{
+	color: #f2e9e4ff;
+	font-family: helvetica;
+	font-weight: 700;
+	font-size: 2rem;
+	width: fit-content;
+	align-self: center;
+	justify-self: center;
+}
+
+.spacer{
+	justify-self: end;
+}
+
+.corpo{
+	margin-top: 5rem;
+	width:100%;
+	display: grid;
+	grid-template-columns: auto auto;
+}
+
+.li-menu{
+	list-style-type: none;
+	font-family: Helvetica;
+	font-weight: 700;
+	color: #f2e9e4ff;
+	margin-top: 5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.ol-menu{
+	font-weight: 400;
+	margin-top: 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.base{
+	position: relative;
+}
+
+.lymp{
+	position: absolute;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	width: 32.22vh;   
+	height: 83.33vh; 
+	top: 10vh;       
+	left: 2vh;     
+}
+
+.card{
+	position: absolute;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	width: 12.22vh;   
+	top: 15vh;        
+	left: 11.7vh;   
+}
+
+.resp{
+	position: absolute;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	width: 15vh;   
+	top: 18vh;     
+	left: 10.7vh;    
+}
+
+.lymp:hover{
+	opacity: 1;
+	cursor: pointer;
+}
+
+.card:hover{
+	opacity: 1;
+	cursor: pointer;
+}
+
+.resp:hover{
+	opacity: 1;
+	cursor: pointer;
+}
+
+a{
+	cursor: pointer;
+}
+
+.tiy{
+	grid-column: 1/-1;
+	background-color: #9a8c98ff;
+	width: 100%;
+	text-align: center;
+}

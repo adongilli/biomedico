@@ -1,0 +1,5 @@
+--dark: #22223bff;
+--middle-dark: #4a4e69ff;
+--middle: #9a8c98ff;
+--middle-light: #c9ada7ff;
+--light: #f2e9e4ff;
