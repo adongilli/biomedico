@@ -63,7 +63,7 @@ body{
 	justify-self: end;
 }
 
-.corpo{
+.testo{
 	margin-top: 5rem;
 	width:100%;
 	display: grid;
@@ -93,6 +93,28 @@ body{
 	position: relative;
 }
 
+.corpo{
+	width: 36.3vh;
+}
+
+.dige{
+	position: absolute;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	width: 13vh;
+	top: 27vh;       
+	left: 11.8vh;     
+}
+
+.urin{
+	position: absolute;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	width: 8vh;
+	top: 39vh;       
+	left: 14vh;
+}
+
 .lymp{
 	position: absolute;
 	opacity: 0;
@@ -116,21 +138,23 @@ body{
 	position: absolute;
 	opacity: 0;
 	transition: opacity 0.3s ease;
-	width: 15vh;   
-	top: 18vh;     
-	left: 10.7vh;    
+	width: 10vh;   
+	top: 15vh;     
+	left: 10vh;    
 }
 
-.lymp:hover{
-	opacity: 1;
-	cursor: pointer;
+.nerv{
+	position: absolute;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	width: 10vh;     
+	left: 12.7vh;    
 }
 
-.card:hover{
-	opacity: 1;
-	cursor: pointer;
-}
-
+.dige:hover,
+.urin:hover,
+.lymp:hover,
+.card:hover,
 .resp:hover{
 	opacity: 1;
 	cursor: pointer;
@@ -145,4 +169,31 @@ a{
 	background-color: #9a8c98ff;
 	width: 100%;
 	text-align: center;
+}
+
+.paragrafo-lymp,
+.paragrafo-dige,
+.paragrafo-urin,
+.paragrafo-card,
+.paragrafo-resp,
+.paragrafo-nerv {
+	position:absolute;
+	opacity: 0;
+	transition: opacity .3s;
+}
+
+body:has(.card:hover) .card,
+body:has(.card:hover) .paragrafo-card,
+body:has(.resp:hover) .resp,
+body:has(.resp:hover) .paragrafo-resp,
+body:has(.dige:hover) .dige,
+body:has(.dige:hover) .paragrafo-dige,
+body:has(.urin:hover) .urin,
+body:has(.urin:hover) .paragrafo-urin,
+body:has(.lymp:hover) .lymp,
+body:has(.lymp:hover) .paragrafo-lymp,
+body:has(.nerv:hover) .nerv,
+body:has(.nerv:hover) .paragrafo-nerv {
+	cursor: pointer;
+  	opacity: 1;
 }
